@@ -1,0 +1,6 @@
+{% extends 'email.html' %}
+{% block content %}
+    <h2>Hi {{ name }}, please click the link below to verify your email subscription to DBL Free.</h2>
+    <br>
+    <a href="{{ verification_url }}">{{ verification_url }}</a>
+{% endblock %}

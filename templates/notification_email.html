@@ -1,0 +1,9 @@
+{% extends 'email.html' %}
+{% block content %}
+    <h1>Hey {{ name }}, There's a new post on DBL Free:</h1>
+    <br>
+    <h2><a href="{% url 'blog_post' slug=post.slug %}">{{ post.title }} {% if post.protected %}(Protected){% endif %}</a></h2>
+    <br>
+    <br>
+    <a href="{{ unsubscribe_url }}">Unsubscribe</a>
+{% endblock %}

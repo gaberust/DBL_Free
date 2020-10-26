@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        <h1>We can't find what you're looking for...</h1>
+        <br>
+        <button class="btn btn-primary" onclick="window.location.href='{% url 'index' %}'">Return to Homepage</button>
+    </div>
+{% endblock %}

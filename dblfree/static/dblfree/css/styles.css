@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --clr-primary: #047c84;
+  --clr-shadow: #cfd8dc;
+  --clr-shadow-dark: #a5abad;
+  --clr-danger: #eb1a1a;
+  --clr-info: #0275d8;
+  --radius: 0.5rem;
+}
+
+body {
+    background-color: #f0f7f8;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem;
+}
+
+p {
+    line-height: 2rem;
+}
+
+br {
+    margin: 0.5rem 0;
+}
+
+.wrap {
+    overflow-wrap: anywhere;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.clr-primary {
+    color: var(--clr-primary);
+}
+
+.clr-danger {
+    color: var(--clr-danger);
+}
+
+.nav-list, .container {
+    background: white;
+    margin: 0.5rem;
+}
+
+.nav-list {
+    box-shadow: 0px 0px 10px var(--clr-shadow);
+    padding: 1rem 0;
+    margin: 0.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    transition: all 200ms ease-in;
+}
+
+.nav-item a:hover {
+    color: var(--clr-primary);
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.nav-item:first-child a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    transition: all 200ms ease-in;
+}
+
+.btn-primary {
+    border: 2px solid var(--clr-primary);
+}
+
+.btn-danger {
+    border: 2px solid var(--clr-danger);
+}
+
+.btn-info {
+    border: 2px solid var(--clr-info);
+}
+
+.btn-primary:hover {
+    color: white;
+    background: var(--clr-primary);
+}
+
+.btn-danger:hover {
+    color: white;
+    background: var(--clr-danger);
+}
+
+.btn-info:hover {
+    color: white;
+    background: var(--clr-info);
+}
+
+.toggle {
+    display: none;
+}
+
+.content {
+    display: flex;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+
+.container {
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 10px var(--clr-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 200ms ease-in;
+    align-items: flex-start;
+}
+
+.index-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../img/ryunosuke-kikuno-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 6rem 4rem;
+    justify-content: center;
+}
+
+.index-hero h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+
+.index-hero h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.index-hero .btn-primary {
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.posts, .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts a {
+    width: 33.3%;
+    text-decoration: none;
+    color: black;
+}
+
+.portfolio-item {
+    width: 33.3%;
+}
+
+.posts .container:hover {
+    box-shadow: 0px 0px 15px var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.posts .container img, .portfolio-item img {
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.label {
+    padding: 2rem;
+}
+
+.label > * {
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.tags li {
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+    font-size: small;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    margin-right: 1rem;
+    transition: all 200ms ease-in;
+}
+
+.tags a {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tags.links li {
+    margin: 0;
+}
+
+.tags.links a {
+    margin-right: 1rem;
+}
+
+.tags.links li:hover {
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+.portfolio-item .tags li {
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-size: 2rem;
+}
+
+.password-form {
+    padding: 0;
+    border: none;
+    margin-top: 1rem;
+}
+
+.password-form * {
+    margin-right: 1rem;
+}
+
+input, textarea {
+    border: 1px solid var(--clr-shadow);
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+}
+
+textarea {
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--clr-shadow-dark);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid var(--clr-primary);
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    transition: all 200ms ease-in;
+}
+
+.pagination a:hover {
+    color: white;
+    background-color: var(--clr-primary);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flex-column * {
+    margin-bottom: 1rem;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-row * {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#hyvor-talk-view {
+    width: 100%;
+}
+
+.hyvor-wrapper {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.vert-center {
+    justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+    .posts a, .portfolio-item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .posts a, .portfolio-item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .toggle {
+        display: block;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+    }
+
+    .nav-list li:nth-child(n+3) {
+        width: 100%;
+        text-align: right;
+        margin-top: 2rem;
+        display: none;
+    }
+
+    .nav-list.display-menu .nav-item {
+        display: block;
+        transition: all 800ms;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-basis: inherit;
+    }
+
+    fieldset {
+        flex-direction: column;
+    }
+
+    fieldset *:nth-child(-n + 2) {
+        margin-bottom: 0.5rem;
+    }
+
+    fieldset input[type="text"] {
+        height: 2rem;
+    }
+}

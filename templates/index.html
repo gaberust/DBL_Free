@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container index-hero">
+        <h1>DBL Free</h1>
+        <h2>InfoSec Enthusiast and Developer of Things</h2>
+        <button class="btn btn-primary" onclick="window.location.href='{% url 'blog' %}'">Read More</button>
+    </div>
+    {% include 'posts.html' %}
+{% endblock %}

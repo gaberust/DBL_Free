@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% if title %}
+        <div class="container p-2">
+            <h1>{{ title }}:</h1>
+            {% if user.is_authenticated %}
+                <br>
+                <form action="{% url 'delete_tag' tagname=title %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete Tag</button>
+                </form>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% include 'posts.html' %}
+    {% include 'pagination.html' %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        <h1>DBL Free Privacy Policy</h1>
+        <br>
+        <p>
+            DBL Free is privacy focused, and takes care to collect as little necessary information as possible.
+            DBL Free will never collect personal information without your consent and intent to share.
+            DBL Free does collect names and emails purely for the purpose of communication, and is 100% optional.
+        </p>
+        <p>
+            The only personal information DBL Free will ever ask for is your name and email when using the Contact Form at
+            <a href="{% url 'contact' %}">https://dblfree.com{% url 'contact' %},</a>
+            or the Subscription Form at
+            <a href="{% url 'subscribe' %}">https://dblfree.com{% url 'subscribe' %}.</a>
+        </p>
+        <p>
+            DBL Free will never share any of your information with any third party or other users that you provide in either of these two forms,
+            and never leaves the DBL Free database, unless it is being used specifically by DBL Free to communicate with you.
+            All of your personal information can be removed completely upon request.
+        </p>
+        <p>
+            DBL Free uses cookies. Signed cookie-based sessions are used specifically and exclusively for authorization to view restricted content.
+            DBL Free also uses cookies for protection against Cross-Site Request Forgery attacks. No other cookies are used by DBL Free for any other reason.
+        </p>
+        <p>
+            DBL Free does employ the use of two third party plugins (namely hCaptcha and Hyvor Talk),
+            and extensive care and research was taken to ensure that they were the best options available to protect your privacy.
+            You can see their privacy policies at:
+        </p>
+        <p><strong>hCaptcha Privacy Policy: </strong><a href="https://www.hcaptcha.com/privacy">https://www.hcaptcha.com/privacy</a></p>
+        <p><strong>Hyvor Talk Privacy Policy: </strong><a href="https://hyvor.com/privacy-policy">https://hyvor.com/privacy-policy</a></p>
+    </div>
+{% endblock %}

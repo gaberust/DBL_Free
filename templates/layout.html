@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'dblfree/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'dblfree/css/styles.css' %}">
+
+    <link rel="icon" href="{% static 'dblfree/img/logo-circle.png' %}">
+
+    <script src="{% static 'dblfree/js/script.js' %}"></script>
+
+    <title>DBL Free</title>
+</head>
+<body>
+    <nav>
+        <ul id="navbar" class="nav-list">
+            <li class="nav-item">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'dblfree/img/logo-circle.png' %}" alt="Logo">
+                    <h3>DBL Free</h3>
+                </a>
+            </li>
+            <li class="nav-item toggle">
+                <button class="btn btn-primary" onclick="toggleNavbar();">&#x2630;</button>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'create_post' %}">New Post</a>
+                </li>
+            {% endif %}
+            <li class="nav-item">
+                <a href="{% url 'blog' %}">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'portfolio' %}">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section class="main-section">
+            {% block content %}{% endblock %}
+        </section>
+        <aside class="sidebar">
+            <div class="container p-2">
+                <h2>Tags</h2>
+                {% if user.is_authenticated %}
+                    <fieldset id="tagform" class="password-form">
+                        <label>New Tag:</label>
+                        <input id="new_tag_input" type="text">
+                    </fieldset>
+                    <script>
+                        document.getElementById('new_tag_input').addEventListener('keydown', async (e) => {
+                            if (e.key == 'Enter') {
+                                let new_tag_input = document.getElementById('new_tag_input')
+                                let new_tag_name = new_tag_input.value;
+                                new_tag_input.value = '';
+
+                                data = new FormData();
+                                data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+                                let res = await fetch(`/blog/tag/${new_tag_name}/create`, {
+                                    method: 'POST',
+                                    mode: 'cors',
+                                    cache: 'no-cache',
+                                    credentials: 'same-origin',
+                                    body: data,
+                                });
+
+                                if (res.ok) {
+                                    let new_anchor_html = `<a href="/blog/tag/${new_tag_name}"><li>${new_tag_name}</li></a>`;
+                                    document.getElementById('taglist').innerHTML += new_anchor_html;
+
+                                    let tag_options = document.getElementById('id_tags');
+                                    if (tag_options !== null && tag_options !== undefined) {
+                                        let response_text = await res.text();
+                                        tag_options.innerHTML = response_text.replace(/^<\s*select[^<]*>$/gim, '').replace(/^<\s*\/\s*select\s*>$/gim, '');
+                                    }
+                                }
+                                else {
+                                    alert("Unable to create new tag. Does it already exist?");
+                                }
+                            }
+                        });
+                    </script>
+                {% endif %}
+                <ul id="taglist" class="tags links">
+                    {% for tag in taglist %}
+                        <a href="{% url 'blog_tag' tagname=tag.name %}"><li>{{ tag.name }}</li></a>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="container p-2">
+                <h2>Contact Information</h2>
+                <br>
+                <h3>Gabe Rust</h3>
+                <br>
+                <p>gabe@dblfree.com</p>
+            </div>
+            <div class="container p-2">
+                <h2>Looking for a Resume?</h2>
+                <br>
+                <button class="btn btn-primary" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+            </div>
+            <div class="container p-2">
+                <h2>Subscribe to New Content</h2>
+                <br>
+                <button class="btn btn-primary" onclick="window.location.href='{% url 'subscribe' %}'">Subscribe</button>
+            </div>
+            <div class="container p-2">
+                <h2>Privacy Policy</h2>
+                <br>
+                <button class="btn btn-info" onclick="window.location.href='{% url 'privacy' %}'">View Privacy Policy</button>
+            </div>
+            {% if user.is_authenticated %}
+                <div class="container p-2">
+                    <form action="{% url 'create_access_token' %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-info">Create New Access Token</button>
+                    </form>
+                </div>
+            {% endif %}
+        </aside>
+    </div>
+
+</body>
+</html>

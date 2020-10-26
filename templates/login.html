@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        <form class="flex-column" action="{% url 'write' uri=uri %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

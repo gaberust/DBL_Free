@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        {% if email_exists_unverified %}
+            <h3 class="clr-primary">
+                Your email address appears to already exist, but has not yet been verified.
+                We've sent you another verification email.
+                If you do not receive one, contact us at gabe@dblfree.com to request manual verification.
+            </h3>
+        {% endif %}
+        {% if success %}
+            <h3 class="clr-primary">
+                Your email has been submitted successfully. Please check your inbox to verify your email.
+                If you do not verify your email within 48 hours, you may be required to submit this form again.
+            </h3>
+            <br>
+        {% endif %}
+        {% if failure %}
+            <h3 class="clr-danger">The verification email failed to send. Contact us at gabe@dblfree.com to request manual verification.</h3>
+            <br>
+        {% endif %}
+        {% if captcha_failure %}
+            <h3 class="clr-danger">CAPTCHA verification is required.</h3>
+            <br>
+        {% endif %}
+        <form action="{% url 'subscribe' %}" class="flex-column" method="POST">
+            <legend>Subscribe to New Content</legend>
+            {% csrf_token %}
+            {{ form }}
+            <br>
+            <div class="flex-row">
+                <input type="checkbox" name="privacy_policy_accepted" required>
+                <p>I have read and agree to the <a href="{% url 'privacy' %}">DBL Free Privacy Policy.</a></p>
+            </div>
+            <br>
+            <div class="h-captcha" data-sitekey="{{ HCAPTCHA_SITEKEY }}"></div>
+            <script src="https://hcaptcha.com/1/api.js" async defer></script>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

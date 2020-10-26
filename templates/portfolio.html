@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% load static %}
+    <div class="container p-2">
+        <h1>Portfolio</h1>
+    </div>
+    <div class="portfolio">
+        <div class="portfolio-item">
+            <div class="container">
+                <div class="label">
+                    <h3>FBLA Member Database</h3>
+                    <ul class="tags">
+                        <li>Java</li>
+                        <li>Java SWING</li>
+                        <li>Java Print API</li>
+                        <li>Apache POI</li>
+                    </ul>
+                    <p>Source: <a href="https://github.com/gaberust/fbla-database">GitHub: gaberust/fbla-database</a></p>
+                    <p>A database for FBLA (Future Business Leaders of America) members, and was my submission for the 2016
+                        National Leadership Conference in Atlanta, GA, and landed 1st place at the earlier
+                        Arizona State Leadership Conference. It includes full CRUD and search functionality,
+                        as well as options to print and export to TXT or XLSX.</p>
+                </div>
+                <img src="{% static 'dblfree/img/fblamemberdatabase.png' %}">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="container">
+                <div class="label">
+                    <h3>FoxDen Web CTF</h3>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>HTML</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                    <p>Source: Temporarily Private. CTF is still active.</p>
+                    <p>The Web CTF portion of the FoxBadge Challenge. Because it is an ongoing internal event,
+                        the source code is currently unavailable, and details are pretty sparse.</p>
+                </div>
+                <img src="{% static 'dblfree/img/foxden.png' %}">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="container">
+                <div class="label">
+                    <h3>DBL Free</h3>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <p>Source: Currently Closed Source.</p>
+                    <p>My personal blog and portfolio site for development and infosec.
+                        See the <a href="{% url 'about' %}">About Page</a> for more details.</p>
+                </div>
+                <img src="{% static 'dblfree/img/dblfree-screenshot.png' %}">
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        <form class="flex-column" action="{% url 'edit_post' slug=slug %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+            {% load static %}
+            <script src="{% static 'dblfree/js/ckeditor/ckeditor.js' %}"></script>
+            <script>
+                CKEDITOR.config.width = '100%';
+                CKEDITOR.replace('id_content');
+            </script>
+        </form>
+    </div>
+{% endblock %}

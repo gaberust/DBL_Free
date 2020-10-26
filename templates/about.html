@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        <h1>About</h1>
+        <br>
+        <div class="flex-row">
+            {% load static %}
+            <img class="profile-image" src="{% static 'dblfree/img/profile.jpg' %}">
+            <div class="flex-column vert-center">
+                <h3>Gabe Rust</h3>
+                <h4>dblfree.com</h4>
+            </div>
+        </div>
+        <br>
+        <p>Gabe is a self-taught developer who took an interest in programming at age 16, whose interest quickly became a passion.
+            As he grew more familiar with web development in particular,
+            web application security and safely handling untrusted user input caught his attention.
+            He has been studying development since 2015 and information security since 2018.
+            Wanting to write secure applications got him thinking like a hacker.
+            <em>What would I do to break this</em> constantly ran across his mind as he was writing code
+            and he soon realized that he enjoys security just as much- if not more- than development.
+            Gabe Rust is currently pursuing a career as a security consultant.</p>
+    </div>
+    <div class="container p-2">
+        <h1>What is DBL Free?</h1>
+        <br>
+        <p>DBL Free is a reference to a
+            <a href="https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory">double free memory error</a>,
+            which is both a bug and software vulnerability.
+            DBL Free hosts both Gabe Rust's blog and portfolio as he pursues a career in cyber security.
+            DBL Free content will include many development and security topics, such as general development,
+            web application security, and CTF write-ups.</p>
+    </div>
+{% endblock %}

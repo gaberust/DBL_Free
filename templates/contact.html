@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container p-2">
+        {% if success %}
+            <h3 class="clr-primary">Your message has been sent successfully.</h3>
+            <br>
+        {% endif %}
+        {% if failure %}
+            <h3 class="clr-danger">Your message failed to send. You can contact us directly at gabe@dblfree.com.</h3>
+            <br>
+        {% endif %}
+        {% if captcha_failure %}
+            <h3 class="clr-danger">CAPTCHA verification is required.</h3>
+            <br>
+        {% endif %}
+        <form action="{% url 'contact' %}" class="flex-column" method="POST">
+            <legend>Contact</legend>
+            {% csrf_token %}
+            {{ form }}
+            <br>
+            <div class="flex-row">
+                <input type="checkbox" name="privacy_policy_accepted" required>
+                <p>I have read and agree to the <a href="{% url 'privacy' %}">DBL Free Privacy Policy.</a></p>
+            </div>
+            <br>
+            <div class="h-captcha" data-sitekey="{{ HCAPTCHA_SITEKEY }}"></div>
+            <script src="https://hcaptcha.com/1/api.js" async defer></script>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
