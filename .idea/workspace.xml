@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d28e574f-322f-423a-8aea-e5accd4edae7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="347eee30-88e8-4302-bd56-bd587d8b51c0" />
+  <component name="ProjectId" id="1iTRmzAr0lyKzyoFtamYSkMFl3w" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dblfree/static/dblfree/img" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DBL_Free" type="Python.DjangoServer" factoryName="Django server">
+      <module name="DBL_Free" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d28e574f-322f-423a-8aea-e5accd4edae7" name="Default Changelist" comment="" />
+      <created>1601929759354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601929759354</updated>
+      <workItem from="1601929774179" duration="16204000" />
+      <workItem from="1602029731303" duration="9051000" />
+      <workItem from="1602092847740" duration="12484000" />
+      <workItem from="1602172220733" duration="2097000" />
+      <workItem from="1602175287809" duration="3291000" />
+      <workItem from="1602354681436" duration="191000" />
+      <workItem from="1602819724974" duration="1178000" />
+      <workItem from="1602821020702" duration="159000" />
+      <workItem from="1602821229510" duration="65000" />
+      <workItem from="1602821327002" duration="5936000" />
+      <workItem from="1602831294763" duration="293000" />
+      <workItem from="1602889380948" duration="30267000" />
+      <workItem from="1602964138276" duration="2623000" />
+      <workItem from="1602977368946" duration="26119000" />
+      <workItem from="1603034311011" duration="3717000" />
+      <workItem from="1603039609814" duration="49000" />
+      <workItem from="1603039711513" duration="138000" />
+      <workItem from="1603039864070" duration="200000" />
+      <workItem from="1603046923915" duration="526000" />
+      <workItem from="1603061071594" duration="6999000" />
+      <workItem from="1603070181106" duration="611000" />
+      <workItem from="1603070840806" duration="8326000" />
+      <workItem from="1603083296870" duration="1225000" />
+      <workItem from="1603128495204" duration="5398000" />
+      <workItem from="1603157936371" duration="5328000" />
+      <workItem from="1603164465228" duration="281000" />
+      <workItem from="1603212963953" duration="7725000" />
+      <workItem from="1603382929192" duration="35000" />
+      <workItem from="1603383058473" duration="2012000" />
+      <workItem from="1603388314434" duration="2167000" />
+      <workItem from="1603471885673" duration="4043000" />
+      <workItem from="1603528803165" duration="237000" />
+      <workItem from="1603575548453" duration="24502000" />
+      <workItem from="1603603363759" duration="1190000" />
+      <workItem from="1603689086960" duration="3438000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1025" y="181" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603575964261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1025" y="181" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603575964261" />
+    <state x="1243" y="239" width="374" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1603603386012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1243" y="239" width="374" height="556" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603603386012" />
+    <state x="464" y="155" key="SettingsEditor" timestamp="1603061120798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603061120798" />
+    <state x="0" y="0" width="959" height="1039" key="dock-window-1" timestamp="1603689705458">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="959" height="1039" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1603689705458" />
+    <state x="0" y="0" width="959" height="1039" key="dock-window-2" timestamp="1603599606275">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="959" height="1039" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1603599606275" />
+    <state x="0" y="0" width="959" height="1039" key="dock-window-3" timestamp="1603600520279">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="959" height="1039" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1603600520279" />
+    <state x="0" y="0" width="959" height="1039" key="dock-window-4" timestamp="1603602672345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="959" height="1039" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1603602672345" />
+    <state x="1103" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1603578648179">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603578648179" />
+    <state x="685" y="415" width="540" height="204" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602354767057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="415" width="540" height="204" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602354767057" />
+  </component>
+</project>
