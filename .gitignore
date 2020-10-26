@@ -4,6 +4,7 @@ static/
 DBL_Free/config.py
 */__pycache__/
 */migrations/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
