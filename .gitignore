@@ -1,9 +1,8 @@
 # Specified
 media/
 static/
-DBL_Free/config.py
-*/__pycache__/
-*/migrations/
+config.py
+migrations/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
