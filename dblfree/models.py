@@ -36,3 +36,7 @@ class Subscriber(models.Model):
     delete_after = models.DateTimeField(default=two_days_from_now)
     name = models.CharField(max_length=32, blank=True, default='')
     email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return \
+            f"{self.name if self.name else 'Subscriber'}: {self.email} ({'NOT ' if not self.verified else ''}VERIFIED)"
