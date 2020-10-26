@@ -1,9 +1,3 @@
-# Specified
-media/
-static/
-*/config.py
-*/migrations/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -129,3 +123,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Specified
+*/migrations/
+/media/
+/static/
+/DBL_Free/config.py
