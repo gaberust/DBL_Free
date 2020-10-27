@@ -8,7 +8,7 @@
             <button class="btn btn-primary" type="submit">Submit</button>
             {% load static %}
             <script src="{% static 'dblfree/js/ckeditor/ckeditor.js' %}"></script>
-            <script>
+            <script nonce="{{ request.csp_nonce }}">
                 CKEDITOR.config.width = '100%';
                 CKEDITOR.replace('id_content');
             </script>

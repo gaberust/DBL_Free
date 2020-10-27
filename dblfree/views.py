@@ -1,3 +1,4 @@
+from csp.decorators import csp_exempt
 from django.core.exceptions import ValidationError
 from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpResponse, Http404
 from django.contrib.auth import login, logout
@@ -108,6 +109,7 @@ def logout_user(request):
 
 
 @authenticated_or_404
+@csp_exempt
 def create_post(request):
     taglist = Tag.objects.all()
     if request.method == "GET":
@@ -154,6 +156,7 @@ def delete_tag(request, tagname):
 
 
 @authenticated_or_404
+@csp_exempt
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     taglist = Tag.objects.all()

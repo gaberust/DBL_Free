@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'csp.middleware.CSPMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -123,9 +124,6 @@ MEDIA_URL = 'media/'
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
-FILE_UPLOAD_MAX_MEMORY_SIZE = 20971520
-DATA_UPLOAD_MAX_MEMORY_SIZE = 20971520
-
 HCAPTCHA_SITEKEY = cfg.HCAPTCHA_SITEKEY
 HCAPTCHA_SECRET = cfg.HCAPTCHA_SECRET
 
@@ -139,3 +137,14 @@ EMAIL_PORT = cfg.EMAIL_PORT
 EMAIL_USE_TLS = cfg.EMAIL_USE_TLS
 DEFAULT_FROM_EMAIL = cfg.DEFAULT_FROM_EMAIL
 CONTACT_EMAIL = cfg.CONTACT_EMAIL
+
+CSP_DEFAULT_SRC = ("'none'",)
+CSP_SCRIPT_SRC = ("'self'", 'https://talk.hyvor.com', 'https://hcaptcha.com', 'https://*.hcaptcha.com')
+CSP_IMG_SRC = ("'self'", 'data:', 'https://talk.hyvor.com')
+CSP_FRAME_SRC = ('https://talk.hyvor.com', 'https://hcaptcha.com', 'https://*.hcaptcha.com')
+CSP_FONT_SRC = ('https://fonts.gstatic.com',)
+CSP_CONNECT_SRC = ("'self'", 'https://hcaptcha.com')
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", 'https://*.hcaptcha.com', 'https://fonts.googleapis.com')
+CSP_NAVIGATE_TO = ("'self'", 'https://www.hcaptcha.com', 'https://hyvor.com')
+CSP_FORM_ACTION = ("'self'",)
+CSP_INCLUDE_NONCE_IN = ('script-src',)

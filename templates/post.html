@@ -60,13 +60,13 @@
         <div class="hyvor-wrapper">
             <div id="hyvor-talk-view"></div>
         </div>
-        <script type="text/javascript">
+        <script nonce="{{ request.csp_nonce }}" type="text/javascript">
             let HYVOR_TALK_WEBSITE = {{ HYVOR_TALK_WEBSITE }};
             let HYVOR_TALK_CONFIG = {
                 url: "https://dblfree.com/{% url 'blog_post' slug=post.slug %}",
                 id: {{ post.pk }}
             };
         </script>
-        <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+        <script async type="text/javascript" src="https://talk.hyvor.com/web-api/embed"></script>
     {% endif %}
 {% endblock %}

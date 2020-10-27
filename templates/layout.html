@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="nav-item toggle">
-                <button class="btn btn-primary" onclick="toggleNavbar();">&#x2630;</button>
+                <button class="btn btn-primary" id="toggle">&#x2630;</button> <!-- TODO ADD EVENT LISTENER -->
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -44,7 +44,9 @@
                 <a href="{% url 'portfolio' %}">Portfolio</a>
             </li>
             <li class="nav-item">
-                <button class="btn btn-primary" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+                <form action="{% url 'contact' %}" method="GET">
+                    <button type="submit" class="btn btn-primary">Contact</button>
+                </form>
             </li>
         </ul>
     </nav>
@@ -61,14 +63,14 @@
                         <label>New Tag:</label>
                         <input id="new_tag_input" type="text">
                     </fieldset>
-                    <script>
+                    <script nonce="{{ request.csp_nonce }}">
                         document.getElementById('new_tag_input').addEventListener('keydown', async (e) => {
                             if (e.key == 'Enter') {
                                 let new_tag_input = document.getElementById('new_tag_input')
                                 let new_tag_name = new_tag_input.value;
                                 new_tag_input.value = '';
 
-                                data = new FormData();
+                                let data = new FormData();
                                 data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
 
                                 let res = await fetch(`/blog/tag/${new_tag_name}/create`, {
@@ -80,9 +82,6 @@
                                 });
 
                                 if (res.ok) {
-                                    let new_anchor_html = `<a href="/blog/tag/${new_tag_name}"><li>${new_tag_name}</li></a>`;
-                                    document.getElementById('taglist').innerHTML += new_anchor_html;
-
                                     let tag_options = document.getElementById('id_tags');
                                     if (tag_options !== null && tag_options !== undefined) {
                                         let response_text = await res.text();
@@ -112,17 +111,23 @@
             <div class="container p-2">
                 <h2>Looking for a Resume?</h2>
                 <br>
-                <button class="btn btn-primary" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+                <form action="{% url 'contact' %}" method="GET">
+                    <button type="submit" class="btn btn-primary">Contact</button>
+                </form>
             </div>
             <div class="container p-2">
                 <h2>Subscribe to New Content</h2>
                 <br>
-                <button class="btn btn-primary" onclick="window.location.href='{% url 'subscribe' %}'">Subscribe</button>
+                <form action="{% url 'subscribe' %}" method="GET">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
             <div class="container p-2">
                 <h2>Privacy Policy</h2>
                 <br>
-                <button class="btn btn-info" onclick="window.location.href='{% url 'privacy' %}'">View Privacy Policy</button>
+                <form action="{% url 'privacy' %}" method="GET">
+                    <button type="submit" class="btn btn-info">View Privacy Policy</button>
+                </form>
             </div>
             {% if user.is_authenticated %}
                 <div class="container p-2">
