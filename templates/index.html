@@ -3,7 +3,9 @@
     <div class="container index-hero">
         <h1>DBL Free</h1>
         <h2>InfoSec Enthusiast and Developer of Things</h2>
-        <button class="btn btn-primary" onclick="window.location.href='{% url 'blog' %}'">Read More</button>
+        <form action="{% url 'blog' %}" method="GET">
+            <button type="submit" class="btn btn-primary">Read More</button>
+        </form>
     </div>
     {% include 'posts.html' %}
 {% endblock %}
