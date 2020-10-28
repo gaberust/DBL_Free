@@ -349,7 +349,7 @@ input:focus, textarea:focus {
 }
 
 .post-content li > ul {
-    margin-left: 4rem;
+    margin-left: 3rem;
 }
 
 @media screen and (max-width: 1440px) {
