@@ -10,8 +10,6 @@
 
     <link rel="icon" type="image/png" href="{% static 'dblfree/img/logo-circle.png' %}">
 
-    <script src="{% static 'dblfree/js/script.js' %}"></script>
-
     <title>DBL Free</title>
 </head>
 <body>
@@ -24,7 +22,8 @@
                 </a>
             </li>
             <li class="nav-item toggle">
-                <button class="btn btn-primary" id="toggle">&#x2630;</button> <!-- TODO ADD EVENT LISTENER -->
+                <button class="btn btn-primary" id="toggle">&#x2630;</button>
+                <script src="{% static 'dblfree/js/script.js' %}"></script>
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item">
