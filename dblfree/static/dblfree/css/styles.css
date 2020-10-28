@@ -352,6 +352,10 @@ input:focus, textarea:focus {
     margin-left: 3rem;
 }
 
+.post-content img {
+    margin-top: 1rem;
+}
+
 @media screen and (max-width: 1440px) {
     .posts a, .portfolio-item {
         width: 50%;
