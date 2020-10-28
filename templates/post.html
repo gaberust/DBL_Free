@@ -42,8 +42,9 @@
                     <input name="password" type="text">
                     <button class="btn btn-primary" type="submit">Submit</button>
                     {% if user.is_authenticated %}
-                        <button class="btn btn-info" type="button"
-                                onclick="window.location.href='{% url 'blog_post_auth_bypass' slug=post.slug %}'">Bypass</button>
+                        <form action="{% url 'blog_post_auth_bypass' slug=post.slug %}" method="GET">
+                            <button type="submit" class="btn btn-info">Bypass</button>
+                        </form>
                     {% endif %}
                 </fieldset>
                 <br>
