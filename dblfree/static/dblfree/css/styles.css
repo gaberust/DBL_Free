@@ -344,11 +344,11 @@ input:focus, textarea:focus {
     justify-content: center;
 }
 
-.content ul {
+.post-content ul {
     margin-left: 2rem;
 }
 
-.content li > ul {
+.post-content li > ul {
     margin-left: 4rem;
 }
 
