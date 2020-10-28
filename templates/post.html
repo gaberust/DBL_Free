@@ -41,11 +41,6 @@
                     <label for="password">Flag:</label>
                     <input name="password" type="text">
                     <button class="btn btn-primary" type="submit">Submit</button>
-                    {% if user.is_authenticated %}
-                        <form action="{% url 'blog_post_auth_bypass' slug=post.slug %}" method="GET">
-                            <button type="submit" class="btn btn-info">Bypass</button>
-                        </form>
-                    {% endif %}
                 </fieldset>
                 <br>
                 <div class="flex-row">
@@ -55,6 +50,11 @@
                 <br>
                 <p>Are you an employer looking at my work? <a href="{% url 'contact' %}">Send me a message</a> to request access to all protected content.</p>
             </form>
+            {% if user.is_authenticated %}
+                <form action="{% url 'blog_post_auth_bypass' slug=post.slug %}" method="GET">
+                    <button type="submit" class="btn btn-info">Bypass</button>
+                </form>
+            {% endif %}
         {% endif %}
     </div>
     {% if accessible %}
