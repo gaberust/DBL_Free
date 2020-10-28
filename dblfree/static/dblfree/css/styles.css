@@ -208,6 +208,7 @@ br {
 }
 
 .tags {
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -225,7 +226,6 @@ br {
 }
 
 .tags a {
-    margin-top: 1rem;
     text-decoration: none;
     color: inherit;
 }
