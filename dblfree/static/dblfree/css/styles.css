@@ -344,6 +344,14 @@ input:focus, textarea:focus {
     justify-content: center;
 }
 
+.content ul {
+    margin-left: 2rem;
+}
+
+.content li > ul {
+    margin-left: 4rem;
+}
+
 @media screen and (max-width: 1440px) {
     .posts a, .portfolio-item {
         width: 50%;
